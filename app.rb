@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'pry'
 
-class ImageServer < Sinatra::Base
+class APIServer < Sinatra::Base
 
   get "/" do
     "Welcome to Linbot! :D"

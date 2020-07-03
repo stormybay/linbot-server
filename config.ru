@@ -1,3 +1,3 @@
 require File.dirname(__FILE__) + '/app'
 
-run ImageServer.new
+run APIServer.new
