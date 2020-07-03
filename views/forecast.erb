@@ -1,0 +1,25 @@
+<div id="forecast" style='background-image: url("/images/<%= params['weather_main'] %>.jpg")'>
+  <div class="section forecast-bottom">
+    <h4><%= params["location"].split(' ').map{|w| w.capitalize }.join(' ') %></h4>
+
+    <div class="forecast-description">
+      <%= @weather_icon %>
+      <%= params["weather_descrip"] %>
+    </div>
+    <div class="forecast-temp">
+      <h1><%= params["actual_temp"] %>º <%= params["units"] %></h1>
+    </div>
+    <div class="forecast-temp">
+      <h3><%= params["high_temp"] %>º/<%= params["low_temp"] %>º</h3>
+    </div>
+    <div class="forecast-wind">
+      <h4>Feels Like: <%= params["feels_temp"] %>º</h4>
+    </div>
+    <div class="forecast-wind">
+      <h4>Wind: <%= params["wind"] %> <%= params["units"] == 'F' ? 'mph' : 'km/h' %></h4>
+    </div>
+    <div class="forecast-humidity">
+      <h4>Humidity: <%= params["humidity"] %>%</h4>
+    </div>
+  </div>
+</div>
